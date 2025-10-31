@@ -29,8 +29,8 @@ public interface Brainfuck {
      * @return new instance of the interpreter
      * @throws IllegalArgumentException if: program is null or empty, OR out is null, OR in is null, OR stackSize is below 1.
      */
-    static Brainfuck createInstance(String program, PrintStream out, InputStream in, int stackSize) {
-        return null;
+    static Brainfuck createInstance(String program, PrintStream out, InputStream in, int stackSize){
+        return new BrainfuckImpl(program, out, in, stackSize);
     }
 
 }
